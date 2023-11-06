@@ -50,6 +50,7 @@ app.use('/logout', require('./routers/logout'));
 // need to intercept incoming request with 'verifyJWT' middleware here
 app.use(verifyJWT);
 app.use('/employees', require('./routers/api/employee'));
+app.use('/users', require('./routers/api/users'));
 
 // app.all handles 'All types of http request methods"
 app.all('*', (req, res) => {
